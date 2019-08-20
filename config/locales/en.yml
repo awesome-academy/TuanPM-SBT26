@@ -1,0 +1,113 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales otherUL32gPSfHY
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  title_contact: "Contact"
+  title_about: "About"
+  hello: "Hello world"
+  title_notfound: "Notfound"
+  posts:
+    show:
+      content: "Content"
+      commment: "Comment"
+  session:
+    form:
+      login: "Login"
+      remember_title: "Remember me"
+      email: "Email"
+      password: "Password"
+      remember_me: "Remember Me"
+    new:
+      login_title: "Login"
+      login: "Login"
+    create:
+      login_success: "Login Success"
+  layouts:
+    application:
+      title: "TuanPMSbt26"
+    header:
+      search: "Search"
+      value: ""
+      nameapp: "Travel App"
+      signup: "Signup"
+  users:
+    form:
+      signup: "SignUp"
+    new:
+      signup_title: "SignUp"
+      signup: "SignUp"
+    create:
+      signup_success: "SignUp Success!"
+  session:
+    form:
+      login: "Login"
+    new:
+      login_title: "Login"
+      login: "Login" 
+    create:
+      login_failed: "Invail Email Or Password!" 
+      login_success: "Login Success!"
+  static_pages:
+    home:
+      title_home: "Home"
+  admin:
+    categories:
+      destroy:
+        delete_success: "Delete success!"
+      update:
+        category_update_success: "Update Success!"
+      index:
+        category_title: "Categories"
+      new: 
+        create: "Create"
+        create_category: "Create Category"
+      edit:
+        update: "Update"
+        edit_category: "Edit category"
+    tours:
+      new:
+        create: "Create"
+        price_discount: "Price Discount"
+      edit:
+        edit: "Edit"
+        edit_tour: "Edit tour"
+      index: 
+        title: "Title"
+        category_name: "Category"
+        address_source: "Address Source"
+        price: "Price"
+        price_discount: "Price Discount"
+        total_day: "Total Day"
+        total_member_max: "Total member max"
+        total_member_current: "Total member current"
+        rating_average: "Rating"
+        action: "Action"
+        tour_title: "Tours"
