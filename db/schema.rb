@@ -22,18 +22,18 @@ ActiveRecord::Schema.define(version: 2019_08_27_012149) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "tourdetail_id"
-    t.integer "informationbooktour_id"
-    t.integer "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "name"
-    t.integer "type_post"
+    t.string "type_post", limit: 10
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+  end
+
+  create_table "commentposts", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -80,7 +80,14 @@ ActiveRecord::Schema.define(version: 2019_08_27_012149) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "ratings", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "tourdetails", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "tour_id"
+    t.date "day_start"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tourratings", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.integer "tour_id"
     t.integer "user_id"
     t.string "rating_number"
@@ -88,16 +95,10 @@ ActiveRecord::Schema.define(version: 2019_08_27_012149) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tourdetails", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.integer "tour_id"
-    t.date "day_start"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "tours", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "title"
     t.text "content"
+    t.date "day_start"
     t.string "address_source"
     t.string "address_distance"
     t.decimal "price", precision: 10
@@ -113,6 +114,15 @@ ActiveRecord::Schema.define(version: 2019_08_27_012149) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "userbooktours", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "tour_id"
+    t.integer "informationbooktour_id"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
     t.string "fullname"
     t.string "email"
@@ -124,6 +134,7 @@ ActiveRecord::Schema.define(version: 2019_08_27_012149) do
     t.integer "admin", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
     t.string "password_confirmation"
     t.string "password_digest"
   end
