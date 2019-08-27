@@ -11,7 +11,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :address
       t.string :remember_digest
       t.integer :admin
-
+      
       t.timestamps
     end
   end

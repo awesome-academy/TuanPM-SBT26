@@ -5,7 +5,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "2.5.1"
 
 gem "rails", "~> 5.2.3"
+gem "bootstrap-will_paginate", "~> 1.0.0"
+gem "will_paginate", "~> 3.1.7"
 gem "bootstrap-sass", "3.3.7"
+gem "mini_magick", "4.7.0"
+gem "carrierwave", "1.2.2"
+gem "bcrypt"
+gem "ckeditor_rails"
 gem "jquery-rails"
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "puma", "~> 3.11"
@@ -16,7 +22,6 @@ gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 gem "config"
 gem "jbuilder", "~> 2.5"
-
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do

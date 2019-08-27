@@ -1,3 +1,5 @@
 checkbox_true: "1"
 length_max_name: 50
 length_min_pass: 6
+def_perpage: 5
+def_page: 1

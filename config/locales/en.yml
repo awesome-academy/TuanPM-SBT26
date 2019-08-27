@@ -30,8 +30,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  shared:
+    modal:
+      close: "Close"
   hello: "Hello world"
   title_notfound: "Notfound"
+  session:
+    form:
+      login: "Login"
+      remember_title: "Remember me"
+    new:
+      login_title: "Login"
+    create:
+      login_success: "Login Success"
   layouts:
     application:
       title_page: "TuanPMSbt26"
@@ -40,6 +51,10 @@ en:
       contact: "Contact"
     header:
       nameapp: "Travel App"
+      login: "Login"
+      search: "Search"
+      value: ""
+      logout: "Logout"
   static_pages:
     home:
       title_home: "Home"
@@ -49,3 +64,29 @@ en:
     about:
       title_about: "About"
       about_us: "About for us"
+  users:
+    new:
+      signup_title: "Signup"
+    form:
+      signup: "Signup"
+    create:
+      signup_success: "Signup Success!"
+  admin:
+    categories:
+      form:
+        img_accept: ""
+      index:
+        category_title: "Categories"
+        image: "Image"
+        name: "Name"
+        type: "Type"
+        action: "Action"
+      destroy:
+        delete_success: "Delete success!"
+      update:
+        category_update_success: "Update Success!"
+      new:
+        create: "Create"
+      edit:
+        update: "Update"
+        edit_category: "Edit Category"
