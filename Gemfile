@@ -14,6 +14,7 @@ gem "uglifier", ">= 1.3.0"
 gem "rubocop", "~> 0.54.0", require: false
 gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
+gem "config"
 gem "jbuilder", "~> 2.5"
 
 gem "bootsnap", ">= 1.1.0", require: false
