@@ -57,7 +57,6 @@ class Admin::CategoriesController < ApplicationController
   end
 
   private
-
   def load_category
     @category = Category.find_by(id: params[:id])
     unless @category

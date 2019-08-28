@@ -1,9 +1,7 @@
+
 <%= provide(:url_action, admin_categories_path) %>
 <%= provide(:button_title, t(".create")) %>
+<%= provide(:title, t(".create category")) %>
+<%= provide(:render_form, "admin/categories/form") %>
 
-<h1 class="text-center"><%= t(".create_category") %></h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-   <%= render "form" %>
-  </div>
-</div>
+<%= render "shared/form_content" %>
