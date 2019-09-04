@@ -110,17 +110,21 @@ ActiveRecord::Schema.define(version: 2019_08_29_033341) do
     t.string "address_source"
     t.string "address_distance"
     t.decimal "price", precision: 10
-    t.decimal "discount", precision: 10
+    t.float "discount", default: 0.0
     t.decimal "price_discount", precision: 10
-    t.integer "total_day"
+    t.integer "total_day", default: 0
     t.integer "total_member_max"
-    t.integer "total_member_current"
-    t.decimal "rating_average", precision: 10
+    t.integer "total_member_current", default: 0
+    t.integer "rating_average", default: 0
     t.string "images"
     t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "total_booking_tour", default: 0
+<<<<<<< HEAD
+=======
+    t.string "start_days"
+>>>>>>> 0e6af045dc224752d2b27247c4c7f7493fd3acc2
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
