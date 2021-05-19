@@ -19,7 +19,7 @@ gem "mini_magick", "4.7.0"
 gem "ckeditor"
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "pry"
-gem "puma", "~> 3.11"
+gem "puma", "~> 4.3"
 gem "pundit"
 gem "rails", "~> 5.2.3"
 gem "rubocop", "~> 0.54.0", require: false
